@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent Successfully</title>
+    <style>
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .video-container video {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .success-message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="{% static 'email_app/success_video.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="success-message">Sending Successful!</div>
+    </div>
+</body>
+</html>
